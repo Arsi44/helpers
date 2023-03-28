@@ -18,5 +18,5 @@ check_cgroup_tools() {
 check_cgroup_tools
 
 # добавляем текущие процессы в контрольную группу mygroup
-sudo cgclassify -g cpu:mygroup $(pgrep -u $(whoami))
+sudo cgclassify -g cpu:mygroup $(pgrep -u $(whoami))  &> /dev/null
 
