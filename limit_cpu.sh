@@ -8,7 +8,7 @@ check_cgroup_tools() {
         # создаем контрольную группу cpu с именем mygroup
         sudo cgcreate -g cpu:mygroup
         # устанавливаем ограничение на использование ЦПУ в количестве 50 миллисекунд в секунду
-        sudo cgset -r cpu.cfs_quota_us=50000 mygroup
+        sudo cgset -r cpu.cfs_quota_us=70000 mygroup
     else
         echo "cgroup-tools установлены. Ok"
     fi
